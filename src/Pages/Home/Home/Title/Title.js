@@ -4,7 +4,7 @@ import photo from '../../../../images/All-back-Barber-Shop-5-4-Fading.webp'
 
 const Title = () => {
     return (
-        <div className="hero mt-10 bg-pink-600 p-4">
+        <div className="hero mt-10 bg-pink-600 p-4 rounded-lg">
             <div className="hero-content flex-col lg:flex-row">
                 <img src={photo} alt="" className="max-w-sm rounded-lg shadow-2xl" />
                 <div className='text-center'>

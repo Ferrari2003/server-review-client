@@ -5,7 +5,7 @@ import logo from '../../../images/log.jpeg'
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-black text-base-content">
+        <footer className="footer p-10 bg-black text-base-content rounded-lg">
             <div>
                <img src={logo} alt="" />
                 <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>

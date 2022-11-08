@@ -6,9 +6,9 @@ import photo2 from '../../../../images/maxresdefault.jpg'
 
 const Carousel = () => {
     return (
-    <div>
+    <div className=''>
         
-            <div className="carousel w-full">
+            <div className="carousel w-full rounded-lg">
         <div id="item1" className="carousel-item w-full">
           <img src={photo} alt='' className="w-full" />
         </div> 

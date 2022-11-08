@@ -1,7 +1,7 @@
 import React from 'react';
 
-const CardTo = ({card}) => {
-    const {img, title,discription} = card
+const HideCard = ({data}) => {
+    const {img, title, discription} = data
     return (
         <div className="card w-96 bg-base-100 shadow-xl mx-auto">
             <figure><img src={img} alt="Shoes" /></figure>
@@ -16,4 +16,4 @@ const CardTo = ({card}) => {
     );
 };
 
-export default CardTo;
+export default HideCard;

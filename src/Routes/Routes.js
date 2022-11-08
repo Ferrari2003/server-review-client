@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
-import Card from "../Pages/Home/Home/Cards/Card/Card";
+
 
 import Home from "../Pages/Home/Home/Home";
 import About from "../Pages/Shared/About/About";
 import Blog from "../Pages/Shared/Blog/Blog";
+import Card from "../Pages/Shared/Card/Card";
 import Login from "../Pages/Shared/Login/Login";
 import Register from "../Pages/Shared/Register/Register";
 
@@ -15,9 +16,13 @@ export const router = createBrowserRouter([
     children:[
         {
             path:'/',
-            
-            element:<Home></Home>
-
+            element:<Home></Home>,
+            loader: () => fetch(`http://localhost:5000/`)
+        },
+        {
+            path:'/card',
+            element:<Card></Card>,
+            loader: () => fetch(`http://localhost:5000/services`)
         },
         {
             path:'/about',
@@ -34,11 +39,7 @@ export const router = createBrowserRouter([
         {
             path:'/blog',
             element:<Blog></Blog>
-        },
-        {
-            path:'/card',
-            element: <Card></Card>
-        }
+        },      
        
     ]
  }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='m-11'>
+        <div className='m-11 rounded-lg'>
             <div className='bg-red-400 p-5 mb-5 rounded-lg'>
                 <h3 className='text-2xl'>Qus 1: What is the differences between SQL and NoSQL?</h3>
                 <p>Anss: SQL databases are vertically scalable, while NoSQL databases are

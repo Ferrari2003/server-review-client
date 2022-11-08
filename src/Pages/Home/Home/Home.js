@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useLoaderData } from 'react-router';
 import ServiceTime from '../../../ServiceTime/ServiceTime';
 import Button from './Button/Button';
-import Card from './Cards/Card/Card';
+
 
 import Cards from './Cards/Cards';
 
@@ -14,17 +15,8 @@ import Title from './Title/Title';
 
 
 const Home = () => {
-    const [cards, setCards] = useState([])
+    const cards = useLoaderData();
  
-
-    useEffect(()=> {
-        fetch(`http://localhost:5000/services`)
-        .then(res => res.json())
-        .then(data => setCards(data))
-    },[])
-
-    
-
     return (
         <div>
             <Carousel></Carousel>
