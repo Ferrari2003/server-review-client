@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from './Carousel/Carousel';
+import Title from './Title/Title';
 
 
 
@@ -15,6 +16,7 @@ const Home = () => {
     return (
         <div>
             <Carousel></Carousel>
+            <Title></Title>
             <h2>this is home :{data.length}</h2>
             
         </div>

@@ -7,6 +7,7 @@ import photo2 from '../../../../images/maxresdefault.jpg'
 const Carousel = () => {
     return (
     <div>
+        
             <div className="carousel w-full">
         <div id="item1" className="carousel-item w-full">
           <img src={photo} alt='' className="w-full" />
@@ -20,9 +21,9 @@ const Carousel = () => {
       
       </div> 
       <div className="flex justify-center w-full py-2 gap-2">
-        <a href="#item1" className="btn btn-xs">1</a> 
-        <a href="#item2" className="btn btn-xs">2</a> 
-        <a href="#item3" className="btn btn-xs">3</a> 
+        <a href="#item1" className="btn btn-xs ">1</a> 
+        <a href="#item2" className="btn btn-xs ">2</a> 
+        <a href="#item3" className="btn btn-xs ">3</a> 
       </div>
     </div>
     );
