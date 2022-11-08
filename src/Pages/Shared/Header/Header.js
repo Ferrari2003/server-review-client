@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Context/AuthProvider';
 import logo from '../../../logo/logo.png'
 
 
 const Header = () => {
+    const {LogOut} = useContext(AuthContext);
+
+    const handleLogOut=() => {
+        LogOut()
+        .then(() => {})
+        .catch(error => console.error(error))
+    }
+
     return (
         <div className="navbar bg-base-100">
             <div className="flex-1">
@@ -21,18 +30,18 @@ const Header = () => {
                 <div className="dropdown dropdown-end mr-7">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img src="https://placeimg.com/80/80/people" />
+                            <img src="https://placeimg.com/80/80/people" alt='' />
                         </div>
                     </label>
                     <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
                         <li>
-                            <a className="justify-between">
+                            <Link className="justify-between">
                                 Profile
                                 <span className="badge">New</span>
-                            </a>
+                            </Link>
                         </li>
 
-                        <li><a>Logout</a></li>
+                        <li><Link to={'/login'} onClick={handleLogOut}>Logout</Link></li>
                     </ul>
                 </div>
             </div>
