@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='m-11'>
-            <div className='bg-amber-400 p-5 mb-5 rounded-lg'>
+            <div className='bg-red-400 p-5 mb-5 rounded-lg'>
                 <h3 className='text-2xl'>Qus 1: What is the differences between SQL and NoSQL?</h3>
                 <p>Anss: SQL databases are vertically scalable, while NoSQL databases are
                     horizontally scalable. SQL databases are table-based, while NoSQL
@@ -11,7 +11,7 @@ const Blog = () => {
                     databases are better for multi-row transactions, while NoSQL is
                     better for unstructured data like documents or JSON.</p>
             </div>
-            <div className='bg-cyan-400 p-5 mb-5 rounded-lg'>
+            <div className='bg-blue-400 p-5 mb-5 rounded-lg'>
                 <h3 className='text-2xl'>Qus 2:JSON Web Token (JWT) is an open standard (RFC 7519) that defines a</h3>
                 <p>Anss: JSON Web Token (JWT) is an open standard (RFC 7519) that defines a
                     compact and self-contained way for securely transmitting information
@@ -25,7 +25,7 @@ const Blog = () => {
                     the other hand, is an interpreter or execution environment for the
                     JavaScript programming language.</p>
             </div>
-            <div className='bg-lime-400 p-5 mb-5 rounded-lg'>
+            <div className='bg-yellow-700 p-5 mb-5 rounded-lg'>
                 <h3 className='text-2xl'>Qus : How does NodeJS handle multiple requests at the same time?</h3>
                 <p>Anss: NodeJS receives multiple client requests and places them into
                     EventQueue. NodeJS is built with the concept of event-driven

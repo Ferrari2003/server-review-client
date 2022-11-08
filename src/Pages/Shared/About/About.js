@@ -7,7 +7,12 @@ import img4 from '../../../images/1390921-fire-haircut-1123.webp'
 const About = () => {
     return (
         <div>
-            <div className="carousel w-full mb-6">
+            <div className='m-7 text-center'>
+                <h1 className='text-4xl font-bold'>Barber</h1>
+                <br />
+                <h1>:Barbers are a specific kind of hairstylist or cosmetologist professional that primarily treats male clientele. They cut, trim, shampoo and condition hair. They may also style hair using hot styling tools and hairstyling products. Some barbers are licensed to color or highlight hair or chemically alter hair textures.</h1>
+            </div>
+            <div className="carousel w-3/4 mx-auto mb-6 ">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={img1} alt='' className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -37,9 +42,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className='m-7'>
-                <h1>:Barbers are a specific kind of hairstylist or cosmetologist professional that primarily treats male clientele. They cut, trim, shampoo and condition hair. They may also style hair using hot styling tools and hairstyling products. Some barbers are licensed to color or highlight hair or chemically alter hair textures.</h1>
-            </div>
+            
         </div>
     );
 };

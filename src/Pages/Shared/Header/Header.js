@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 import logo from '../../../logo/logo.png'
+import { FaUser } from "react-icons/fa";
+import { Image } from 'react-bootstrap';
 
 
 const Header = () => {
-    const {LogOut} = useContext(AuthContext);
+    const {user,LogOut} = useContext(AuthContext);
 
     const handleLogOut=() => {
         LogOut()
@@ -26,11 +28,15 @@ const Header = () => {
                     <Link to={'/about'} className='btn btn-outline btn-primary mr-4'>About</Link>
                     <Link to={'/login'} className='btn btn-outline btn-secondary mr-4'>Login</Link>
                     <Link to={'blog'} className='btn btn-outline btn-accent mr-4'>Blog</Link>
+                  
                 </div>
                 <div className="dropdown dropdown-end mr-7">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img src="https://placeimg.com/80/80/people" alt='' />
+                            {user?.photoURL ?
+                                <Image src={user.photoURL}></Image>
+                                : <FaUser></FaUser>
+                            }
                         </div>
                     </label>
                     <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">

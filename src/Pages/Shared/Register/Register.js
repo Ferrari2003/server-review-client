@@ -7,7 +7,7 @@ import { GoogleAuthProvider } from 'firebase/auth';
 const Register = () => {
     const {signIn,providerLogin} = useContext(AuthContext)
 
-    const handleSignIn = (event) => {
+    const handleSign = (event) => {
         event.preventDefault();
         
         const form = event.target;  
@@ -45,7 +45,7 @@ const handleGooglSignIn = () => {
                    
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form onSubmit={handleSignIn} className="card-body">
+                    <form onSubmit={handleSign} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -66,9 +66,9 @@ const handleGooglSignIn = () => {
                             
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary font-bold">Register</button>
+                            <Link  to={'/login'} className="btn btn-primary font-bold">Register</Link>
                         </div>
-                        <p>Already have an account? <Link to={'/login'} className='font-bold'>Login</Link></p>
+                        <p>Already have an account? <Link  className='font-bold'>Login</Link></p>
                         <Link  to={'/'} onClick={handleGooglSignIn} className='btn btn-wide text-lg'><FaGoogle></FaGoogle> Google Login</Link>
                     </form>
                 </div>
