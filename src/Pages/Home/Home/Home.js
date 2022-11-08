@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ServiceTime from '../../../ServiceTime/ServiceTime';
 import Button from './Button/Button';
 import Card from './Cards/Card/Card';
 
@@ -39,6 +40,7 @@ const Home = () => {
             
           
             <Button></Button>
+            <ServiceTime></ServiceTime>
         </div>
     );
 };

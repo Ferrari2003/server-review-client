@@ -11,7 +11,7 @@ const Cards = ({card}) => {
                     <h2 className="card-title">{title}</h2>
                     <p>{discription}</p>
                     <div className="card-actions justify-end">
-                        <Link className="btn btn-primary">Buy Now</Link>
+                        <Link className="btn btn-primary">Details</Link>
                     </div>
                 </div>
             </div>
