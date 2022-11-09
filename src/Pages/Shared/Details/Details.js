@@ -103,10 +103,9 @@ const Details = () => {
                                     />
                                     <input
                                         type="email"
-                                        name='email'
-                                        defaultValue={user?.email}
+                                        name='email'                                        
                                         placeholder="email"
-                                        required                                       
+                                        required                                                                            
                                         className="input input-bordered p-8 mt-1"
                                     />
                                 </div>

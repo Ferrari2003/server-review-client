@@ -7,8 +7,7 @@ import { Link } from 'react-router-dom';
 const HideCard = ({ data }) => {
     const { _id, img, title, discription } = data
     return (
-      <section>
-          <div>
+      
             <div className="card w-96 bg-base-100 shadow-xl mx-auto">
                 <figure><img src={img} alt="Shoes" /></figure>
                 <div className="card-body">
@@ -19,12 +18,8 @@ const HideCard = ({ data }) => {
                     </div>
                 </div>
             </div>           
-        </div>
-        
-        <section>
-            
-        </section>
-      </section>
+       
+     
         
     );
 };

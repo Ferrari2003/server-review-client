@@ -10,6 +10,7 @@ import Details from "../Pages/Shared/Details/Details";
 import Login from "../Pages/Shared/Login/Login";
 import NotFund from "../Pages/Shared/NotFound/NotFund";
 import Register from "../Pages/Shared/Register/Register";
+import ShowReview from "../Pages/Shared/ShowReview/ShowReview";
 
 export const router = createBrowserRouter([
  {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
             path:'/details/:id',
             element:<Details></Details>,
             loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+        },
+        {
+            path:'/showReview',
+            element:<ShowReview></ShowReview>
         },
         {
             path:'/about',
