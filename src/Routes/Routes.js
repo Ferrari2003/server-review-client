@@ -8,6 +8,7 @@ import Blog from "../Pages/Shared/Blog/Blog";
 import Card from "../Pages/Shared/Card/Card";
 import Details from "../Pages/Shared/Details/Details";
 import Login from "../Pages/Shared/Login/Login";
+import NotFund from "../Pages/Shared/NotFound/NotFund";
 import Register from "../Pages/Shared/Register/Register";
 
 export const router = createBrowserRouter([
@@ -45,7 +46,11 @@ export const router = createBrowserRouter([
         {
             path:'/blog',
             element:<Blog></Blog>
-        },      
+        },     
+        {
+            path:'*',
+            element:<NotFund></NotFund>
+        } 
        
     ]
  }
