@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const HideCard = ({data}) => {
-    const {img, title, discription} = data
+    const {_id, img, title, discription} = data
     return (
         <div className="card w-96 bg-base-100 shadow-xl mx-auto">
             <figure><img src={img} alt="Shoes" /></figure>
@@ -9,7 +11,8 @@ const HideCard = ({data}) => {
                 <h2 className="card-title">{title}</h2>
                 <p>{discription}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Details</button>
+
+                    <Link to={`/details/${_id}`} className="btn btn-primary">Details</Link>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home/Home";
 import About from "../Pages/Shared/About/About";
 import Blog from "../Pages/Shared/Blog/Blog";
 import Card from "../Pages/Shared/Card/Card";
+import Details from "../Pages/Shared/Details/Details";
 import Login from "../Pages/Shared/Login/Login";
 import Register from "../Pages/Shared/Register/Register";
 
@@ -23,6 +24,11 @@ export const router = createBrowserRouter([
             path:'/card',
             element:<Card></Card>,
             loader: () => fetch(`http://localhost:5000/services`)
+        },
+        {
+            path:'/details/:id',
+            element:<Details></Details>,
+            loader: () => fetch(`http://localhost:5000/services/636a76ea64ad4e49c9e43fa9`)
         },
         {
             path:'/about',
