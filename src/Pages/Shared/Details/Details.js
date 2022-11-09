@@ -3,6 +3,8 @@ import { useLoaderData } from 'react-router';
 import { FaUser, FaPhone } from 'react-icons/fa'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMessage, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 
 const Details = () => {
@@ -11,7 +13,13 @@ const Details = () => {
         <section>
             <div>
                 <div>
-                    <img src={img} alt="" className='w-full' />
+                    <figure>
+                        <PhotoProvider>
+                            <PhotoView src={img}>
+                                <img src={img} alt="" className='w-full' />
+                            </PhotoView>
+                        </PhotoProvider>
+                    </figure>
                     <div className='text-center'>
                         <h2 className=' text-4xl mt-6'>{title}</h2>
                         <br />
