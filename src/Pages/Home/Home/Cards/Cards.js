@@ -17,7 +17,8 @@ const Cards = ({ card }) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
-                    <p>{discription}</p>
+                    {discription.slice(0,100)+ '...'}
+                   
                     <div className="card-actions justify-end">
 
                         <Link to={`/details/${_id}`} className="btn btn-primary">Show Details</Link>

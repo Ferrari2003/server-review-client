@@ -68,7 +68,7 @@ const handleGooglSignIn = () => {
                         <div className="form-control mt-6">
                             <Link  className="btn btn-primary font-bold">Register</Link>
                         </div>
-                        <p>Already have an account? <Link  className='font-bold'>Login</Link></p>
+                        <p>Already have an account? <Link to={'/login'} className='font-bold'>Login</Link></p>
                        <div className='flex  justify-center'>
                        <Link  to={'/'} onClick={handleGooglSignIn} className="btn btn-outline btn-secondary" ><FaGoogle className='mr-4 text-red-700 text-2xl'></FaGoogle> Google Login</Link>
                        </div>
