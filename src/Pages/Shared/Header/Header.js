@@ -32,7 +32,9 @@ const Header = () => {
                 </div>
                 <div className="dropdown dropdown-end mr-7">
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    
                         <div className="w-10 rounded-full">
+                            
                             {user?.photoURL ?
                                 <Image src={user?.photoURL}></Image>
                                 : <FaUser></FaUser>
@@ -46,7 +48,8 @@ const Header = () => {
                                 <span className="badge">New</span>
                             </Link>
                         </li>
-
+                            {user?.email}
+                          
                         <li><Link to={'/login'} onClick={handleLogOut}>Logout</Link></li>
                     </ul>
                 </div>
