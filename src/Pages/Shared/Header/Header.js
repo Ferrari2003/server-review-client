@@ -26,7 +26,15 @@ const Header = () => {
                 <div className='mr-11'>
                     <Link to={'/'} className='btn btn-outline mr-4'>Home</Link>
                     <Link to={'/about'} className='btn btn-outline btn-primary mr-4'>About</Link>
-                    <Link to={'/login'} className='btn btn-outline btn-secondary mr-4'>Login</Link>
+                    {
+                        user?.email ?
+                        <>
+                        <Link to={'/showReview'} className='btn btn-outline btn-secondary mr-4'>Show_Review</Link>
+                        </>
+                        :
+                        <Link to={'/login'} className='btn btn-outline btn-secondary mr-4'>Login</Link>
+                    }
+                    
                     <Link to={'blog'} className='btn btn-outline btn-accent mr-4'>Blog</Link>
                   
                 </div>

@@ -19,6 +19,7 @@ const Details = () => {
         const email = form.email.value;
         const number = form.number.value;
         const message = form.message.value;
+        console.log(user)
         
 
 
@@ -29,6 +30,7 @@ const Details = () => {
             email,
             number,
             message
+            
         }
       
         if(number.length > 10){
