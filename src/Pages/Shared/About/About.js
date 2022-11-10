@@ -3,8 +3,10 @@ import img1 from '../../../images/38bcf751-c8f5-4bce-ac9a-c7c83d5e3cd8.webp'
 import img2 from '../../../images/maxresdefault.jpg'
 import img3 from '../../../images/download.jpeg'
 import img4 from '../../../images/1390921-fire-haircut-1123.webp'
+import useTitle from '../../../Hoocks/useTitle';
 
 const About = () => {
+    useTitle('About')
     return (
         <div>
             <div className='m-7 text-center '>

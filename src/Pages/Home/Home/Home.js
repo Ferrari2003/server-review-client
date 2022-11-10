@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
+import useTitle from '../../../Hoocks/useTitle';
 import ServiceTime from '../../../ServiceTime/ServiceTime';
 import Banner from '../../Shared/Benner/Banner';
 import Button from './Button/Button';
@@ -17,6 +18,7 @@ import Title from './Title/Title';
 
 const Home = () => {
     const cards = useLoaderData();
+    useTitle('Home')
  
     return (
         <div>
