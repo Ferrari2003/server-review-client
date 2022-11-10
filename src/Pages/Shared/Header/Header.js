@@ -58,8 +58,9 @@ const Header = () => {
     </ul>
   </div>
  <div className='ml-80'> 
+ <h2 className='text-white'>{user?.email}</h2>
  <div className="dropdown dropdown-end">
-  <h2 className='text-white'>{user?.email}</h2>
+  
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">       
         <div className="w-10 rounded-full">
             {
