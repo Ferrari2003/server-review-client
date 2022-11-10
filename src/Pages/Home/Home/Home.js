@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router';
 import ServiceTime from '../../../ServiceTime/ServiceTime';
+import Banner from '../../Shared/Benner/Banner';
 import Button from './Button/Button';
 
 
@@ -33,6 +34,7 @@ const Home = () => {
           
             <Button></Button>
             <ServiceTime></ServiceTime>
+            <Banner></Banner>
         </div>
     );
 };

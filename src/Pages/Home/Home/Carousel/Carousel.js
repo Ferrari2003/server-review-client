@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../../../../images/photo.jpg'
+import photo from '../../../../images/d6pp54b-90f62eb6-f2c9-457d-b69b-e218396974bf.jpg'
 import photo1 from '../../../../images/t600x362.jpg'
 import photo2 from '../../../../images/maxresdefault.jpg'
 
