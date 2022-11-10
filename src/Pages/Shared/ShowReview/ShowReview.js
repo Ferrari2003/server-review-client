@@ -47,6 +47,7 @@ const ShowReview = () => {
             if(data.modifiedCount > 0){
                 const remaining = review.filter(reviews => reviews._id !== id);
                const approving = review.filter(reviews => reviews._id === id); 
+               approving.status = 'Approved'
 
                const newReviews = [approving, ...remaining, ];
                setReview(newReviews);
@@ -62,14 +63,10 @@ const ShowReview = () => {
                     
                     <thead>
                         <tr>
-                            <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th>
+                            
                             <th>Name</th>
                             <th>email</th>
-                            <th>customer</th>
+                            <th>ServiceName</th>
                             <th>Message</th>
                         </tr>
                     </thead>

@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const ReviewRow = ({ view,handleDelete,handleUpdate }) => {
-    const {_id, serviceName, customer, email, service, status,} = view;
-    const [reviewService, setReviewService] = useState({})
-
-    useEffect(() => {
-        fetch(`http://localhost:5000/services/${service}`)
-            .then(res => res.json())
-            .then(data => setReviewService(data))
-    }, [service])
+    const {_id, serviceName, customer, email,  status,} = view;
+   
     
   
 
@@ -22,15 +16,10 @@ const ReviewRow = ({ view,handleDelete,handleUpdate }) => {
             <td>
                 <div className="flex items-center space-x-3">
                     <div className="avatar">
-                        <div className="mask rounded w-24 h-24">
-
-                            {
-                                reviewService?.img &&
-                                <img src={reviewService} alt="Avatar Tailwind CSS Component" />}
-                        </div>
+                        
                     </div>
                     <div>
-                        <div className="font-bold">{serviceName}</div>
+                        <div className="font-bold">{customer}</div>
                         
                     </div>
                 </div>
@@ -40,7 +29,7 @@ const ReviewRow = ({ view,handleDelete,handleUpdate }) => {
                 <br />
                 
             </td>
-            <td>{customer}</td>
+            <td>{serviceName}</td>
             <th>
                 <button 
                 onClick={()=> handleUpdate(_id)}

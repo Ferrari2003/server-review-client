@@ -5,20 +5,20 @@ import { AuthContext } from '../../../Context/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const Register = () => {
-    const { signIn, providerLogin } = useContext(AuthContext)
+    const {  register, providerLogin } = useContext(AuthContext)
 
-    const handleSign = (event) => {
+    const handleRegister = event => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value
         const email = form.email.value;
         const password = form.password.value;
         console.log(name, email, password)
-        event.target.reset();
+        form.reset()
 
 
 
-        signIn(email, password)
+        register(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user)
@@ -46,7 +46,7 @@ const Register = () => {
 
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                    <form onSubmit={handleSign} className="card-body">
+                    <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>

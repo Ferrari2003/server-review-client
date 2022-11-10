@@ -11,6 +11,7 @@ import Login from "../Pages/Shared/Login/Login";
 import NotFund from "../Pages/Shared/NotFound/NotFund";
 import Register from "../Pages/Shared/Register/Register";
 import ShowReview from "../Pages/Shared/ShowReview/ShowReview";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
  {
@@ -29,12 +30,12 @@ export const router = createBrowserRouter([
         },
         {
             path:'/details/:id',
-            element:<Details></Details>,
+            element:<PrivateRoute><Details></Details></PrivateRoute>,
             loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
         },
         {
             path:'/showReview',
-            element:<ShowReview></ShowReview>
+            element:<PrivateRoute><ShowReview></ShowReview></PrivateRoute>
         },
         {
             path:'/about',

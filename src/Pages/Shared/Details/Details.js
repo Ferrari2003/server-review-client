@@ -33,7 +33,7 @@ const Details = () => {
             
         }
       
-        if(number.length > 10){
+        if(number.length < 10){
             alert('Phone number 10 characters')
         }
         else{
