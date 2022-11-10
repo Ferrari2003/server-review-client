@@ -20,7 +20,7 @@ const Details = () => {
         const number = form.number.value;
         const message = form.message.value;
         console.log(user)
-        
+
 
 
         const review = {
@@ -30,31 +30,31 @@ const Details = () => {
             email,
             number,
             message
-            
+
         }
-      
-        if(number.length < 10){
+
+        if (number.length < 10) {
             alert('Phone number 10 characters')
         }
-        else{
-          fetch(`http://localhost:5000/review`,{
-            method:'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body:JSON.stringify(review)
-          })  
-          .then(res => res.json())
-          .then(data => {
-            console.log(data)
-            if(data.acknowledged){
-                alert('Your Review successful')
-                form.reset();
-            }
-        })
-          .catch(error => console.error(error));
+        else {
+            fetch(`https://barber-shop-server.vercel.app/review`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(review)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.acknowledged) {
+                        alert('Your Review successful')
+                        form.reset();
+                    }
+                })
+                .catch(error => console.error(error));
         }
-       
+
     }
 
     return (
@@ -105,9 +105,9 @@ const Details = () => {
                                     />
                                     <input
                                         type="email"
-                                        name='email'                                        
+                                        name='email'
                                         placeholder="email"
-                                        required                                                                            
+                                        required
                                         className="input input-bordered p-8 mt-1"
                                     />
                                 </div>

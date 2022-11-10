@@ -14,52 +14,52 @@ import ShowReview from "../Pages/Shared/ShowReview/ShowReview";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
- {
-    path:'/',
-    element:<Main></Main>,
-    children:[
-        {
-            path:'/',
-            element:<Home></Home>,
-            loader: () => fetch(`http://localhost:5000/`)
-        },
-        {
-            path:'/card',
-            element:<Card></Card>,
-            loader: () => fetch(`http://localhost:5000/services`)
-        },
-        {
-            path:'/details/:id',
-            element:<PrivateRoute><Details></Details></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
-        },
-        {
-            path:'/showReview',
-            element:<PrivateRoute><ShowReview></ShowReview></PrivateRoute>
-        },
-        {
-            path:'/about',
-            element:<About></About>
-        },
-        {
-            path:'/login',
-            element:<Login></Login>
-        },
-        {
-            path:'/register',
-            element:<Register></Register>
-        },
-        {
-            path:'/blog',
-            element:<Blog></Blog>
-        },     
-        {
-            path:'*',
-            element:<NotFund></NotFund>
-        } 
-       
-    ]
- }
+    {
+        path: '/',
+        element: <Main></Main>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>,
+                loader: () => fetch(`https://barber-shop-server.vercel.app/`)
+            },
+            {
+                path: '/card',
+                element: <Card></Card>,
+                loader: () => fetch(`https://barber-shop-server.vercel.app/services`)
+            },
+            {
+                path: '/details/:id',
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://barber-shop-server.vercel.app/services/${params.id}`)
+            },
+            {
+                path: '/showReview',
+                element: <PrivateRoute><ShowReview></ShowReview></PrivateRoute>
+            },
+            {
+                path: '/about',
+                element: <About></About>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: '*',
+                element: <NotFund></NotFund>
+            }
+
+        ]
+    }
 ])
 
 export default router;
